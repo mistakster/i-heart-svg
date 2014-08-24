@@ -17,14 +17,35 @@
 		<h1>Я &hearts; SVG</h1>
 		<p><a href="http://noteskeeper.ru/about/">Владимир Кузнецов</a>, Engine6</p>
 	</header>
+
 	<section class="slide shout"><div>
         <h2>
             <span class="main-title">
                 Я
                 <span class="main-heart">
+                    <span class="main-heart__trigger_scale next"></span>
+                    <span class="main-heart__trigger_rotate next"></span>
+                    <span class="main-heart__trigger_color next"></span>
+                    <span class="main-heart__trigger_pattern next"></span>
+                    <span class="main-heart__trigger_white next"></span>
                     <svg class="main-heart__icon" xmlns="http://www.w3.org/2000/svg">
                         <title>heart</title>
-                        <use xlink:href="#icon_heart"></use>
+                        <defs>
+                            <pattern id="h-pattern" x="0" y="0" width="100%" height="100%">
+                                <g class="main-heart__stripes">
+                                    <rect x="-20%" y="-25%" width="10%" height="150%"></rect>
+                                    <rect x="0" y="-25%" width="10%" height="150%"></rect>
+                                    <rect x="20%" y="-25%" width="10%" height="150%"></rect>
+                                    <rect x="40%" y="-25%" width="10%" height="150%"></rect>
+                                    <rect x="60%" y="-25%" width="10%" height="150%"></rect>
+                                    <rect x="80%" y="-25%" width="10%" height="150%"></rect>
+                                    <rect x="100%" y="-25%" width="10%" height="150%"></rect>
+                                </g>
+                            </pattern>
+                        </defs>
+                        <use xlink:href="#icon_heart" class="main-heart__outline"></use>
+                        <use xlink:href="#icon_heart" class="main-heart__shape"></use>
+                        <use xlink:href="#icon_heart" class="main-heart__pattern" fill="url(#h-pattern)"></use>
                     </svg>
                 </span>
                 SVG
