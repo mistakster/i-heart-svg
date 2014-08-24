@@ -1,0 +1,30 @@
+{
+  "name": "i-heart-svg",
+  "version": "1.0.0",
+  "description": "I heart SVG",
+  "dependencies": {
+    "shower-bright": "~1.0.10",
+    "shower-core": "~1.0.6"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mistakster/i-heart-svg.git"
+  },
+	"bugs": {
+		"url": "https://github.com/mistakster/i-heart-svg/issues"
+	},
+	"homepage": "https://mistakster.github.io/i-heart-svg",
+  "keywords": [
+    "talk",
+    "presentation",
+    "svg",
+    "icon"
+  ],
+  "author": {
+		"name": "Vladimir Kuznetsov",
+		"email": "mistakster@gmail.com",
+		"url": "http://noteskeeper.ru/about/"
+	},
+  "license": "CC-BY-4.0"
+}
