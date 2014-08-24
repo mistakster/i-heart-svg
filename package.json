@@ -7,7 +7,7 @@
     "shower-core": "~1.0.6"
   },
   "devDependencies": {
-    "grunt-svg2string": "^0.1.4",
+    "grunt-svg2string": "^0.1.5",
     "grunt-cli": "^0.1.13",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^1.0.1",
