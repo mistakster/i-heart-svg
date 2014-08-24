@@ -6,15 +6,26 @@
     "shower-bright": "~1.0.10",
     "shower-core": "~1.0.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt-svg2string": "^0.1.4",
+    "grunt-cli": "^0.1.13",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^1.0.1",
+    "grunt-contrib-less": "^0.11.4",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-connect": "^0.8.0"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/grunt"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/mistakster/i-heart-svg.git"
   },
-	"bugs": {
-		"url": "https://github.com/mistakster/i-heart-svg/issues"
-	},
-	"homepage": "https://mistakster.github.io/i-heart-svg",
+  "bugs": {
+    "url": "https://github.com/mistakster/i-heart-svg/issues"
+  },
+  "homepage": "https://mistakster.github.io/i-heart-svg",
   "keywords": [
     "talk",
     "presentation",
@@ -22,9 +33,9 @@
     "icon"
   ],
   "author": {
-		"name": "Vladimir Kuznetsov",
-		"email": "mistakster@gmail.com",
-		"url": "http://noteskeeper.ru/about/"
-	},
+    "name": "Vladimir Kuznetsov",
+    "email": "mistakster@gmail.com",
+    "url": "http://noteskeeper.ru/about/"
+  },
   "license": "CC-BY-4.0"
 }

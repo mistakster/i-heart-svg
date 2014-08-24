@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Я &hearts; SVG</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=680, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="node_modules/shower-bright/styles/screen.css">
+    <link rel="stylesheet" href="assets/_/slides.css">
+    <script src="assets/_/icons.js"></script>
+</head>
+<body class="full">
+    <div id="svg-icon-placeholder"></div>
+    <script>document.getElementById('svg-icon-placeholder').innerHTML = SVG_ICON;</script>
+
+	<header class="caption">
+		<h1>Я &hearts; SVG</h1>
+		<p><a href="http://noteskeeper.ru/about/">Владимир Кузнецов</a>, Engine6</p>
+	</header>
+	<section class="slide shout"><div>
+        <h2>
+            <span class="main-title">
+                Я
+                <span class="main-heart">
+                    <svg class="main-heart__icon" xmlns="http://www.w3.org/2000/svg">
+                        <title>heart</title>
+                        <use xlink:href="#icon_heart"></use>
+                    </svg>
+                </span>
+                SVG
+            </span>
+        </h2>
+	</div></section>
+
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="node_modules/shower-core/shower.min.js"></script>
+	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+</body>
+</html>
