@@ -82,7 +82,7 @@
         <pre>
             <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;</code>
             <code>     viewBox=&quot;0 0 20 20&quot;></code>
-            <code>  <mark class="important">&lt;title>Схлопнуть&lt;/title></mark></code>
+            <code>  <mark class="important">&lt;title>Свернуть&lt;/title></mark></code>
             <code>  &lt;path d=&quot;M15,12l-5-5l-5,5l1,1l4-4l4,4L15,12z&quot;/></code>
             <code>&lt;/svg></code>
         </pre>
@@ -132,14 +132,48 @@
         </pre>
     </div></section>
 
-    <section class="slide"><div>
+    <section class="slide prohibition-sign"><div>
         <div class="slide-example">
             <div class="slide-example__container slide-example__container_shadow_no">
                 <svg xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="#icon_no_ie"></use>
+                    <title>Internet Explorer screwed up again</title>
+                    <use class="prohibition-sign__text" xlink:href="#icon_internet_explorer"></use>
+                    <use class="prohibition-sign__shape" xlink:href="#icon_prohibition_sign"></use>
                 </svg>
             </div>
         </div>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Мы пробовали:</h2>
+        <ol>
+            <li class="next">Менять значения атрибута <code>xlink:href</code> после загрузки страницы.</li>
+            <li class="next">Асинхронно подгружать SVG-файлы.</li>
+            <li class="next">Кешировать SVG-файлы в LocalStorage.</li>
+            <li class="next">&hellip;</li>
+        </ol>
+        <p class="next">В итоге нашли правильную последовательность действий</p>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Шаг 1</h2>
+        <p>Преобразуем SVG в строку JavaScript.</p>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Шаг 2</h2>
+        <p>Подключаем скрипт в &lt;head&gt;</p>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Шаг 3</h2>
+        <p>Добавляем на страницу пустой &lt;div&gt;</p>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Шаг 4</h2>
+        <p>Вставляем содержимое строки, которое мы&nbsp;подготовили на&nbsp;первом шаге,
+            в&nbsp;элемент, который мы&nbsp;добавили на&nbsp;третьем шаге.</p>
     </div></section>
 
     <!--

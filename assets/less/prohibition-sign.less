@@ -1,0 +1,29 @@
+.prohibition-sign {
+
+  &.active &__shape {
+    animation-duration: 1s;
+    animation-name: prohibition-fade-in;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+  }
+
+  &__text {
+    transform: scale(0.75);
+    transform-origin: center;
+  }
+
+  @keyframes prohibition-fade-in {
+    from {
+      opacity: 0;
+      transform: scale(2);
+      transform-origin: center;
+    }
+    to {
+      opacity: 1;
+      transform: scale(0.75);
+      transform-origin: center;
+    }
+  }
+
+}

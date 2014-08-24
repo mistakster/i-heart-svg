@@ -125,6 +125,58 @@
   height: 100%;
   background: white;
 }
+.prohibition-sign.active .prohibition-sign__shape {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: prohibition-fade-in;
+          animation-name: prohibition-fade-in;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.prohibition-sign__text {
+  -webkit-transform: scale(0.75);
+      -ms-transform: scale(0.75);
+          transform: scale(0.75);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+}
+@-webkit-keyframes prohibition-fade-in {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+@keyframes prohibition-fade-in {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
 .slide:after {
   display: none;
 }
