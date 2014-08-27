@@ -62,7 +62,7 @@
         <pre>
             <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;</code>
             <code>     viewBox=&quot;0 0 20 20&quot;></code>
-            <code>  &lt;path d=&quot;M15,12l-5-5l-5,5l1,1l4-4l4,4L15,12z&quot;/></code>
+            <code>  &lt;path d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;>&lt;/path></code>
             <code>&lt;/svg></code>
         </pre>
     </div></section>
@@ -71,7 +71,7 @@
         <div class="slide-example">
             <div class="slide-example__container">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path d="M15,12l-5-5l-5,5l1,1l4-4l4,4L15,12z"></path>
+                    <path d="M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z"></path>
                 </svg>
             </div>
         </div>
@@ -83,7 +83,7 @@
             <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;</code>
             <code>     viewBox=&quot;0 0 20 20&quot;></code>
             <code>  <mark class="important">&lt;title>Свернуть&lt;/title></mark></code>
-            <code>  &lt;path d=&quot;M15,12l-5-5l-5,5l1,1l4-4l4,4L15,12z&quot;/></code>
+            <code>  &lt;path d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;>&lt;/path></code>
             <code>&lt;/svg></code>
         </pre>
     </div></section>
@@ -102,12 +102,55 @@
         <h2>&lt;use&gt;</h2>
     </div></section>
 
-    <section class="slide"><div>
-        <h2>&lt;use&gt;</h2>
+	<section class="slide"><div>
+		<div class="slide-example">
+			<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+				<symbol viewBox="0 0 20 20" id="example-nav-up">
+					<path d="M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z"></path>
+				</symbol>
+			</svg>
+			<div class="slide-example__container slide-example__container_1">
+				<svg xmlns="http://www.w3.org/2000/svg"><use xlink:href="#example-nav-up"></use></svg>
+			</div>
+			<div class="slide-example__container slide-example__container_2">
+				<svg xmlns="http://www.w3.org/2000/svg"><use fill="red" xlink:href="#example-nav-up"></use></svg>
+			</div>
+			<div class="slide-example__container slide-example__container_3">
+				<svg xmlns="http://www.w3.org/2000/svg"><use fill="blue" xlink:href="#example-nav-up"></use></svg>
+			</div>
+		</div>
+	</div></section>
+
+	<section class="slide"><div>
+        <h2>&lt;defs&gt;</h2>
         <pre>
+            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
+            <code>  &lt;defs></code>
+			<code>    &lt;path d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;</code>
+			<code>          id=&quot;icon_nav_up&quot;>&lt;/path></code>
+			<code>  &lt;/defs></code>
+            <code>&lt;/svg></code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+        <h2>&lt;defs&gt;</h2>
+        <pre>
+            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
+            <code>  <mark class="important">&lt;defs></mark></code>
+			<code>    &lt;path d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;</code>
+			<code>          <mark class="important">id</mark>=&quot;icon_nav_up&quot;>&lt;/path></code>
+			<code>  &lt;/defs></code>
+            <code>&lt;/svg></code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>&lt;use&gt;</h2>
+		<pre>
             <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;</code>
             <code>     viewBox=&quot;0 0 20 20&quot;></code>
-            <code>  &lt;use xlink:href=&quot;#icon_nav_up&quot;/></code>
+            <code>  &lt;use xlink:href=&quot;#icon_nav_up&quot;>&lt;/use></code>
             <code>&lt;/svg></code>
         </pre>
     </div></section>
@@ -116,8 +159,39 @@
         <h2>&lt;use&gt;</h2>
         <pre>
             <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;</code>
-            <code>     viewBox=&quot;0 0 20 20&quot;></code>
-            <code>  &lt;use xlink:href=&quot;<mark class="important">#icon_nav_up</mark>&quot;/></code>
+            <code>     <mark class="important">viewBox</mark>=&quot;0 0 20 20&quot;></code>
+            <code>  &lt;use xlink:href=&quot;<mark class="important">#icon_nav_up</mark>&quot;>&lt;/use></code>
+            <code>&lt;/svg></code>
+        </pre>
+    </div></section>
+
+	<section class="slide"><div>
+        <h2>&lt;symbol&gt;</h2>
+        <pre>
+            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
+            <code>  &lt;symbol id=&quot;icon_nav_up&quot; viewBox=&quot;0 0 20 20&quot;></code>
+			<code>    &lt;path d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;>&lt;/path></code>
+			<code>  &lt;/symbol></code>
+            <code>&lt;/svg></code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+        <h2>&lt;symbol&gt;</h2>
+        <pre>
+            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
+            <code>  &lt;symbol <mark class="important">id</mark>=&quot;icon_nav_up&quot; <mark class="important">viewBox</mark>=&quot;0 0 20 20&quot;></code>
+			<code>    &lt;path d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;>&lt;/path></code>
+			<code>  &lt;/symbol></code>
+            <code>&lt;/svg></code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>&lt;use&gt;</h2>
+		<pre>
+            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
+            <code>  &lt;use xlink:href=&quot;#icon_nav_up&quot;>&lt;/use></code>
             <code>&lt;/svg></code>
         </pre>
     </div></section>
@@ -125,16 +199,28 @@
     <section class="slide"><div>
         <h2>&lt;use&gt;</h2>
         <pre>
-            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;</code>
-            <code>     viewBox=&quot;0 0 20 20&quot;></code>
-            <code>  &lt;use xlink:href=&quot;<mark class="important">external.sgv#icon_nav_up</mark>&quot;/></code>
+            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
+            <code>  &lt;use xlink:href=&quot;<mark class="important">#icon_nav_up</mark>&quot;>&lt;/use></code>
+            <code>&lt;/svg></code>
+        </pre>
+    </div></section>
+
+	<section class="slide shout"><div>
+		<h2>Почему&nbsp;бы не&nbsp;сослаться на&nbsp;внешний файл?</h2>
+	</div></section>
+
+    <section class="slide"><div>
+        <h2>&lt;use&gt;</h2>
+        <pre>
+            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
+            <code>  &lt;use xlink:href=&quot;<mark class="important">external.svg#icon_nav_up</mark>&quot;>&lt;/use></code>
             <code>&lt;/svg></code>
         </pre>
     </div></section>
 
     <section class="slide prohibition-sign"><div>
         <div class="slide-example">
-            <div class="slide-example__container slide-example__container_shadow_no">
+            <div class="slide-example__container slide-example__container_full slide-example__container_shadow_no">
                 <svg xmlns="http://www.w3.org/2000/svg">
                     <title>Internet Explorer screwed up again</title>
                     <use class="prohibition-sign__text" xlink:href="#icon_internet_explorer"></use>
@@ -152,7 +238,7 @@
             <li class="next">Кешировать SVG-файлы в LocalStorage.</li>
             <li class="next">&hellip;</li>
         </ol>
-        <p class="next">В итоге нашли правильную последовательность действий</p>
+        <p class="next">В итоге нашли оптимальную последовательность действий.</p>
     </div></section>
 
     <section class="slide"><div>
