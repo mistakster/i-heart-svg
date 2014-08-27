@@ -1,39 +1,48 @@
 .main-title {
   text-align: center;
-  font-size: 180%;
+  font-size: 180px;
   display: block;
 	white-space: nowrap;
 
 	&__space {
 		overflow: hidden;
 		display: inline-block;
-		width: 0.2em;
+		width: 126px;
 	}
 
 }
 
+
+.heart() {
+
+	display: inline;
+	position: absolute;
+	width: 180px;
+	height: 180px;
+
+	&__icon {
+		position: absolute;
+		top: 6px;
+		left: -90px;
+		width: 100%;
+		height: 100%;
+		fill: white;
+	}
+
+}
+
+
 .main-heart {
 
-  display: inline-block;
-  position: relative;
-	width: 180px;
-  height: 180px;
+	.heart();
 
   &__icon {
-    position: absolute;
-    top: 24px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    fill: white;
-
     transition: fill 0.6s, transform 0.6s;
   }
 
   &__outline {
     fill: #52a2df;
-    transform: scale(1.1);
+    transform: scale(1.05);
     transform-origin: center;
   }
 
@@ -90,5 +99,59 @@
   &__trigger_white.active ~ &__icon &__pattern {
     opacity: 0;
   }
+
+}
+
+
+.broken-heart {
+	.heart();
+}
+
+
+#icon_heart_broken {
+
+}
+
+
+.broken-heart-slide {
+
+	&.active &__word_svg {
+		animation-duration: 0.5s;
+		animation-name: brokenFadeOut;
+		animation-iteration-count: 1;
+		animation-timing-function: linear;
+		animation-fill-mode: both;
+	}
+
+	@keyframes brokenFadeOut {
+		form {
+			opacity: 1;
+		}
+		to {
+			opacity: 0;
+		}
+	}
+
+	&__word_fonts {
+		position: absolute;
+		left: 120%;
+	}
+
+	&.active &__word_fonts {
+		animation-delay: 0.3s;
+		animation-duration: 0.5s;
+		animation-name: brokenMoveLeft;
+		animation-iteration-count: 1;
+		animation-fill-mode: both;
+	}
+
+	@keyframes brokenMoveLeft {
+		form {
+			left: 120%;
+		}
+		to {
+			left: 44%;
+		}
+	}
 
 }

@@ -1,35 +1,37 @@
 .main-title {
   text-align: center;
-  font-size: 180%;
+  font-size: 180px;
   display: block;
   white-space: nowrap;
 }
 .main-title__space {
   overflow: hidden;
   display: inline-block;
-  width: 0.2em;
+  width: 126px;
 }
 .main-heart {
-  display: inline-block;
-  position: relative;
+  display: inline;
+  position: absolute;
   width: 180px;
   height: 180px;
 }
 .main-heart__icon {
   position: absolute;
-  top: 24px;
-  left: 0;
+  top: 6px;
+  left: -90px;
   width: 100%;
   height: 100%;
   fill: white;
+}
+.main-heart__icon {
   -webkit-transition: fill 0.6s, -webkit-transform 0.6s;
           transition: fill 0.6s, transform 0.6s;
 }
 .main-heart__outline {
   fill: #52a2df;
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
@@ -106,6 +108,80 @@
 }
 .main-heart__trigger_white.active ~ .main-heart__icon .main-heart__pattern {
   opacity: 0;
+}
+.broken-heart {
+  display: inline;
+  position: absolute;
+  width: 180px;
+  height: 180px;
+}
+.broken-heart__icon {
+  position: absolute;
+  top: 6px;
+  left: -90px;
+  width: 100%;
+  height: 100%;
+  fill: white;
+}
+.broken-heart-slide.active .broken-heart-slide__word_svg {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-name: brokenFadeOut;
+          animation-name: brokenFadeOut;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+@-webkit-keyframes brokenFadeOut {
+  form {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes brokenFadeOut {
+  form {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.broken-heart-slide__word_fonts {
+  position: absolute;
+  left: 120%;
+}
+.broken-heart-slide.active .broken-heart-slide__word_fonts {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-name: brokenMoveLeft;
+          animation-name: brokenMoveLeft;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+@-webkit-keyframes brokenMoveLeft {
+  form {
+    left: 120%;
+  }
+  to {
+    left: 44%;
+  }
+}
+@keyframes brokenMoveLeft {
+  form {
+    left: 120%;
+  }
+  to {
+    left: 44%;
+  }
 }
 .slide-example {
   position: absolute;

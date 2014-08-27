@@ -3,6 +3,10 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 70 160 160" enable-background="new 0 70 160 160" xml:space="preserve">
-<path d="M120.4,83.8c-22.6-2.3-31.3,6.6-40.4,16.9c-9.1-10.3-17.7-19.1-40.4-16.9C25.2,85.1,4.7,99.2,5,121.7
-	c0.4,34.7,23.1,67.2,75,94.9c51.9-27.7,74.6-60.2,75-94.9C155.3,99.2,134.8,85.1,120.4,83.8z"/>
+<g>
+	<path class="heart-piece heart-piece_left" d="M73.8,177.1L86,141.1l-16.7-7.4l10.7-33c-9.1-10.3-17.7-19.1-40.4-16.9C25.2,85.1,4.7,99.2,5,121.7
+		c0.4,34.7,23.1,67.2,75,94.9l9.2-32.2L73.8,177.1z"/>
+	<path class="heart-piece heart-piece_right" d="M120.4,83.8c-22.6-2.3-31.3,6.6-40.4,16.9l-10.7,33l16.7,7.4l-12.2,36.1l15.4,7.2L80,216.6c51.9-27.7,74.6-60.2,75-94.9
+		C155.3,99.2,134.8,85.1,120.4,83.8z"/>
+</g>
 </svg>
