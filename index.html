@@ -250,9 +250,9 @@
     <section class="slide"><div>
         <h2>Мы пробовали:</h2>
         <ol>
-            <li class="next">Менять значения атрибута <code>xlink:href</code> после загрузки страницы.</li>
-            <li class="next">Асинхронно подгружать SVG-файлы.</li>
-            <li class="next">Кешировать SVG-файлы в LocalStorage.</li>
+            <li class="next">менять значения атрибута <code>xlink:href</code> после загрузки страницы;</li>
+            <li class="next">асинхронно подгружать SVG-файлы;</li>
+            <li class="next">кешировать SVG-файлы в LocalStorage;</li>
             <li class="next">&hellip;</li>
         </ol>
         <p class="next">В итоге нашли оптимальную последовательность действий.</p>
@@ -262,10 +262,10 @@
         <h2>Шаг 1</h2>
         <p>Преобразуем SVG в строку JavaScript</p>
 		<pre>
-			<code>var ICON = '&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;>'+</code>
-			<code>'&lt;symbol id=&quot;icon_nav_up&quot; viewBox=&quot;0 0 20 20&quot;>&lt;path '+</code>
-			<code>'d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;>&lt;/path>&lt;/symbol>'+</code>
-			<code>'&lt;/svg>';</code>
+			<code>var icon = '&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;>' +</code>
+			<code>  '&lt;symbol id=&quot;icon_nav_up&quot; viewBox=&quot;0 0 20 20&quot;>&lt;pat' +</code>
+			<code>  'h d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;>&lt;/path>&lt;/s' +</code>
+			<code>  'ymbol>&lt;/svg>';</code>
 		</pre>
     </div></section>
 
@@ -291,11 +291,20 @@
             в&nbsp;элемент, который мы&nbsp;добавили на&nbsp;третьем шаге.</p>
 		<pre>
 			<code>&lt;script></code>
-			<code>  document.getElementById(&quot;svg-icon-placeholder&quot;)</code>
-			<code>    .innerHTML(ICON);</code>
+			<code>  document.getElementById('svg-icon-placeholder')</code>
+			<code>    .innerHTML(icon);</code>
 			<code>&lt;/script></code>
 		</pre>
     </div></section>
+
+	<section class="slide"><div>
+		<h2>Важно:</h2>
+		<ul>
+			<li class="next">добавить все пиктограммы на&nbsp;страницу до&nbsp;того, как они будут использованы;</li>
+			<li class="next">соблюсти уникальность ID в пределах документа;</li>
+			<li class="next"></li>
+		</ul>
+	</div></section>
 
     <!--
         To hide progress bar from entire presentation
