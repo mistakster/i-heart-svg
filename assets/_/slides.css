@@ -288,8 +288,12 @@
 .slide:after {
   display: none;
 }
-.slide h2 a {
+.slide a {
   text-shadow: 1px 0 #ffffff, -1px 0 #ffffff, -2px -1px #ffffff, 2px -1px #ffffff, -2px 1px #ffffff, 2px 1px #ffffff, 0 1px #ffffff, 0 -1px #ffffff, 0 -2px #ffffff, 0 -3px #ffffff;
   background: -webkit-linear-gradient(bottom, transparent 0.1em, currentcolor 0.1em, currentcolor 0.15em, transparent 0.15em, transparent) repeat-x;
   background: linear-gradient(to top, transparent 0.1em, currentcolor 0.1em, currentcolor 0.15em, transparent 0.15em, transparent) repeat-x;
+}
+.slide h3 {
+  font: 48px/1 'Open Sans Light', sans-serif;
+  margin-bottom: 48px;
 }
