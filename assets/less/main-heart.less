@@ -32,6 +32,16 @@
 }
 
 
+@keyframes rotor {
+	form {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+
 .main-heart {
 
 	.heart();
@@ -58,15 +68,6 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     fill: red;
-  }
-
-  @keyframes rotor {
-    form {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
   }
 
   &__trigger_scale.active ~ &__icon {
@@ -152,6 +153,31 @@
 		to {
 			left: 44%;
 		}
+	}
+
+}
+
+
+.final-heart {
+
+	&__spiral {
+		transform-origin: 0 0;
+		animation-direction: reverse;
+		animation-duration: 3s;
+		animation-name: rotor;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		fill: pink;
+		opacity: 0;
+		transition: opacity 3s;
+	}
+
+	&__trigger.active ~ &__icon &__spiral {
+		opacity: 1;
+	}
+
+	&__background {
+		fill: red;
 	}
 
 }
