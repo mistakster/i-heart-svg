@@ -13,12 +13,8 @@
     <div id="svg-icon-placeholder"></div>
     <script>document.getElementById('svg-icon-placeholder').innerHTML = SVG_ICON;</script>
 
-    <header class="caption">
-        <h1>Я &hearts; SVG</h1>
-        <p><a href="http://noteskeeper.ru/about/">Владимир Кузнецов</a>, Engine6</p>
-    </header>
-
-    <section class="slide shout"><div>
+    <section class="slide shout intro"><div>
+        <span class="intro__trigger next"></span>
         <h2>
             <span class="main-title">
                 Я<span class="main-title__space"> </span><span class="main-heart">
@@ -28,7 +24,7 @@
                     <span class="main-heart__trigger_pattern next"></span>
                     <span class="main-heart__trigger_white next"></span>
                     <svg class="main-heart__icon" xmlns="http://www.w3.org/2000/svg">
-                        <title>heart</title>
+                        <title>&hearts;</title>
                         <defs>
                             <pattern id="heart-pattern" width="100%" height="100%" viewBox="-40 -40 80 80">
                                 <rect x="-160" y="-160" width="320" height="320" class="main-heart__background"></rect>
@@ -42,29 +38,20 @@
                 </span><span class="main-title__space"> </span>SVG
             </span>
         </h2>
+        <p class="intro__author"><a href="http://noteskeeper.ru/about/">Владимир Кузнецов</a>, Engine6</p>
     </div></section>
 
-    <!--
-    <section class="slide shout broken-heart-slide"><div>
-        <h2>
-            <span class="main-title">
-                <span class="broken-heart-slide__word broken-heart-slide__word_i">Я</span><span class="main-title__space">
-                </span><span class="main-heart">
-                    <svg class="broken-heart__icon" xmlns="http://www.w3.org/2000/svg">
-                        <title>broken heart</title>
-                        <use xlink:href="#icon_heart" class="broken-heart__shape_underlay"></use>
-                        <use xlink:href="#icon_heart_broken" class="broken-heart__shape"></use>
-                    </svg>
-                </span><span class="main-title__space">
-                </span><span class="broken-heart-slide__word broken-heart-slide__word_svg">SVG</span>
-                <span class="broken-heart-slide__word broken-heart-slide__word_fonts">Шрифты</span>
-            </span>
-        </h2>
+    <section class="slide"><div>
+        <h2>Какие есть способы отображения&nbsp;SVG?</h2>
+        <ul>
+            <li class="next">background-image</li>
+            <li class="next">&lt;img></li>
+            <li class="next">&lt;object>, &lt;embed>, &lt;iframe></li>
+        </ul>
     </div></section>
-    -->
 
     <section class="slide shout"><div>
-        <h2>&lt;svg&gt;</h2>
+        <h2>Встраивание &lt;svg&gt;</h2>
     </div></section>
 
     <section class="slide"><div>
@@ -85,26 +72,6 @@
                 </svg>
             </div>
         </div>
-    </div></section>
-
-    <section class="slide"><div>
-        <h2>&lt;svg&gt;</h2>
-        <pre>
-            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;</code>
-            <code>     viewBox=&quot;0 0 20 20&quot;></code>
-            <code>  <mark class="important">&lt;title>Свернуть&lt;/title></mark></code>
-            <code>  &lt;path d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;>&lt;/path></code>
-            <code>&lt;/svg></code>
-        </pre>
-    </div></section>
-
-    <section class="slide"><div>
-        <h2>Какие ещё есть способы отображения SVG?</h2>
-        <ul>
-            <li class="next">background-image</li>
-            <li class="next">&lt;img></li>
-            <li class="next">&lt;object>, &lt;embed>, &lt;iframe></li>
-        </ul>
     </div></section>
 
     <section class="slide shout"><div>
@@ -147,6 +114,18 @@
         <pre>
             <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
             <code>  <mark class="important">&lt;defs></mark></code>
+            <code>    &lt;path d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;</code>
+            <code>          id=&quot;icon_nav_up&quot;>&lt;/path></code>
+            <code>  <mark class="important">&lt;/defs></mark></code>
+            <code>&lt;/svg></code>
+        </pre>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>&lt;defs&gt;</h2>
+        <pre>
+            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
+            <code>  &lt;defs></code>
             <code>    &lt;path d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;</code>
             <code>          <mark class="important">id</mark>=&quot;icon_nav_up&quot;>&lt;/path></code>
             <code>  &lt;/defs></code>
@@ -332,6 +311,21 @@
             <code>.no-svg .icon {</code>
             <code>  background: url('icon.png') no-repeat 0 0;</code>
             <code>}</code>
+        </pre>
+    </div></section>
+
+    <section class="slide shout"><div>
+        <h2>Доступность содержимого</h2>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>&lt;svg&gt;</h2>
+        <pre>
+            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
+            <code>  &lt;title>Search&lt;/title></code>
+            <code>  &lt;desc>Sitewide keyword search&lt;/desc></code>
+            <code>  &hellip;</code>
+            <code>&lt;/svg></code>
         </pre>
     </div></section>
 

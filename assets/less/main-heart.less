@@ -49,8 +49,8 @@
 
   &__outline {
     fill: #52a2df;
-    transform: scale(1.05);
-    transform-origin: center;
+    stroke: #52a2df;
+    stroke-width: 8px;
   }
 
   &__pattern {
@@ -97,57 +97,6 @@
 
   &__trigger_white.active ~ &__icon &__pattern {
     opacity: 0;
-  }
-
-}
-
-.broken-heart {
-  .heart();
-}
-
-#icon_heart_broken {
-
-}
-
-.broken-heart-slide {
-
-  &.active &__word_svg {
-    animation-duration: 0.5s;
-    animation-name: brokenFadeOut;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
-  }
-
-  @keyframes brokenFadeOut {
-    form {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
-
-  &__word_fonts {
-    position: absolute;
-    left: 120%;
-  }
-
-  &.active &__word_fonts {
-    animation-delay: 0.3s;
-    animation-duration: 0.5s;
-    animation-name: brokenMoveLeft;
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-  }
-
-  @keyframes brokenMoveLeft {
-    form {
-      left: 120%;
-    }
-    to {
-      left: 44%;
-    }
   }
 
 }
