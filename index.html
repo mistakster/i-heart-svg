@@ -26,8 +26,14 @@
                     <svg class="main-heart__icon" xmlns="http://www.w3.org/2000/svg">
                         <title>&hearts;</title>
                         <defs>
-                            <pattern id="heart-pattern" width="100%" height="100%" viewBox="-40 -40 80 80">
-                                <rect x="-160" y="-160" width="320" height="320" class="main-heart__background"></rect>
+                            <pattern id="heart-pattern" x="0" y="0" width="1" height="1">
+                                <rect x="0" y="0" width="180" height="180" fill="url(#animated-spiral-pattern)"
+                                      transform="translate(-15 -25)"></rect>
+                            </pattern>
+                            <pattern id="animated-spiral-pattern" x="0" y="0" width="1" height="1">
+                                <animateTransform attributeName="patternTransform" attributeType="XML" type="rotate"
+                                                  from="360 90 90" to="0 90 90" dur="3s"
+                                                  repeatCount="indefinite"></animateTransform>
                                 <g id="h-spiral-shape" class="main-heart__spiral"></g>
                             </pattern>
                         </defs>

@@ -2,8 +2,7 @@
 
   'use strict';
 
-  function createSpiralPath(box, segments) {
-    var maxRadius = Math.sqrt(box.width() * box.width() + box.height() * box.height());
+  function createSpiralPath(sx, sy, maxRadius, segments) {
     var degreesPerSegment = 360 / segments;
 
     var spiralFunction1 = new LogarithmicSpiral(1, 1.15, degreesPerSegment);
@@ -13,8 +12,8 @@
     var points2 = [];
 
     while (spiralFunction1.getRadius() <= maxRadius && spiralFunction2.getRadius() <= maxRadius) {
-      points1.push(new RPoint(spiralFunction1.getX(), spiralFunction1.getY(), spiralFunction1.getRadius()));
-      points2.push(new RPoint(spiralFunction2.getX(), spiralFunction2.getY(), spiralFunction2.getRadius()));
+      points1.push(new RPoint(spiralFunction1.getX() + sx, spiralFunction1.getY() + sy, spiralFunction1.getRadius()));
+      points2.push(new RPoint(spiralFunction2.getX() + sx, spiralFunction2.getY() + sy, spiralFunction2.getRadius()));
 
       spiralFunction1.advance();
       spiralFunction2.advance();
@@ -107,37 +106,6 @@
   }
 
 
-  function Rectangle(top, left, bottom, right) {
-    this.top = top;
-    this.left = left;
-    this.bottom = bottom;
-    this.right = right;
-  }
-
-  Rectangle.prototype = {
-
-    width: function () {
-      return this.right - this.left;
-    },
-
-    height: function () {
-      return this.bottom - this.top;
-    },
-
-    centerX: function () {
-      return this.left + this.width() / 2;
-    },
-
-    centerY: function () {
-      return this.top + this.height() / 2;
-    },
-
-    includes: function (x, y) {
-      return x >= this.left && x < this.right && y >= this.top && y < this.bottom;
-    }
-  };
-
-
   function toRadians(degrees) {
     return degrees * Math.PI / 180.0;
   }
@@ -147,7 +115,7 @@
   }
 
 
-  var path = createSpiralPath(new Rectangle(-160, -160, 160, 160), 36);
+  var path = createSpiralPath(90, 90, 400, 36);
   var group = document.getElementById('h-spiral-shape');
   group.appendChild(path);
 
