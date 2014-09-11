@@ -204,22 +204,26 @@
   -webkit-transition: fill 0.5s;
           transition: fill 0.5s;
 }
-.demo-color__trigger_blue.active ~ .demo-color__target {
+.demo-color__trigger.active ~ .demo-color__target,
+.demo-color__trigger.extra-trigger.active ~ .demo-color__target {
   fill: blue;
 }
-.demo-color__reset.active ~ .demo-color__target {
+.demo-color__reset.active ~ .demo-color__target,
+.demo-color__reset.extra-reset.active ~ .demo-color__target {
   fill: red;
 }
 .demo-scale__target {
   -webkit-transition: -webkit-transform 0.5s;
           transition: transform 0.5s;
 }
-.demo-scale__trigger.active ~ .demo-scale__target {
+.demo-scale__trigger.active ~ .demo-scale__target,
+.demo-scale__trigger.extra-trigger.active ~ .demo-scale__target {
   -webkit-transform: scale(1.75);
       -ms-transform: scale(1.75);
           transform: scale(1.75);
 }
-.demo-scale__reset.active ~ .demo-scale__target {
+.demo-scale__reset.active ~ .demo-scale__target,
+.demo-scale__reset.extra-reset.active ~ .demo-scale__target {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);

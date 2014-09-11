@@ -12,10 +12,12 @@
   &__target {
     transition: fill 0.5s;
   }
-  &__trigger_blue.active ~ &__target {
+  &__trigger.active ~ &__target,
+  &__trigger.extra-trigger.active ~ &__target {
     fill: blue;
   }
-  &__reset.active ~ &__target {
+  &__reset.active ~ &__target,
+  &__reset.extra-reset.active ~ &__target {
     fill: red;
   }
 }
@@ -25,10 +27,12 @@
   &__target {
     transition: transform 0.5s;
   }
-  &__trigger.active ~ &__target {
+  &__trigger.active ~ &__target,
+  &__trigger.extra-trigger.active ~ &__target {
     transform: scale(1.75);
   }
-  &__reset.active ~ &__target {
+  &__reset.active ~ &__target,
+  &__reset.extra-reset.active ~ &__target {
     transform: scale(1);
   }
 }
