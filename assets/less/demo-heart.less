@@ -1,0 +1,30 @@
+.demo-heart {
+
+  display: block;
+  position: absolute;
+  right: 96px;
+  top: 100px;
+  width: 200px;
+  height: 200px;
+
+  &__shape {
+    fill: red;
+  }
+
+}
+
+.demo-scale {
+
+  &__target {
+    transition: transform 0.5s;
+  }
+
+  &__trigger.active ~ &__target {
+    transform: scale(1.75);
+  }
+
+  &__reset.active ~ &__target {
+    transform: scale(1);
+  }
+
+}
