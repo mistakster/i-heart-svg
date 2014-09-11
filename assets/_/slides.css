@@ -198,8 +198,16 @@
   top: 100px;
   width: 200px;
   height: 200px;
+  fill: red;
 }
-.demo-heart__shape {
+.demo-color__target {
+  -webkit-transition: fill 0.5s;
+          transition: fill 0.5s;
+}
+.demo-color__trigger_blue.active ~ .demo-color__target {
+  fill: blue;
+}
+.demo-color__reset.active ~ .demo-color__target {
   fill: red;
 }
 .demo-scale__target {
