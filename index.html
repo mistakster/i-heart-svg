@@ -80,12 +80,16 @@
     </div></section>
 
     <section class="slide"><div>
-        <h2>&lt;svg&gt;</h2>
         <pre>
+            <code>&lt;!DOCTYPE html></code>
+            <code>&lt;html></code>
+            <code>&hellip;</code>
             <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;</code>
             <code>     viewBox=&quot;0 0 20 20&quot;></code>
             <code>  &lt;path d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;>&lt;/path></code>
             <code>&lt;/svg></code>
+            <code>&hellip;</code>
+            <code>&lt;/html></code>
         </pre>
     </div></section>
 
@@ -126,18 +130,6 @@
         <h2>&lt;defs&gt;</h2>
         <pre>
             <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
-            <code>  &lt;defs></code>
-            <code>    &lt;path d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;</code>
-            <code>          id=&quot;icon_nav_up&quot;>&lt;/path></code>
-            <code>  &lt;/defs></code>
-            <code>&lt;/svg></code>
-        </pre>
-    </div></section>
-
-    <section class="slide"><div>
-        <h2>&lt;defs&gt;</h2>
-        <pre>
-            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
             <code>  <mark class="important">&lt;defs></mark></code>
             <code>    &lt;path d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;</code>
             <code>          id=&quot;icon_nav_up&quot;>&lt;/path></code>
@@ -163,7 +155,7 @@
         <pre>
             <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;</code>
             <code>     viewBox=&quot;0 0 20 20&quot;></code>
-            <code>  &lt;use xlink:href=&quot;#icon_nav_up&quot;>&lt;/use></code>
+            <code>  &lt;use xlink:href=&quot;<mark class="important">#icon_nav_up</mark>&quot;>&lt;/use></code>
             <code>&lt;/svg></code>
         </pre>
     </div></section>
@@ -173,49 +165,35 @@
         <pre>
             <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;</code>
             <code>     <mark class="important">viewBox</mark>=&quot;0 0 20 20&quot;></code>
-            <code>  &lt;use xlink:href=&quot;<mark class="important">#icon_nav_up</mark>&quot;>&lt;/use></code>
-            <code>&lt;/svg></code>
-        </pre>
-    </div></section>
-
-    <section class="slide"><div>
-        <h2>&lt;symbol&gt;</h2>
-        <pre>
-            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
-            <code>  &lt;symbol id=&quot;icon_nav_up&quot; viewBox=&quot;0 0 20 20&quot;></code>
-            <code>    &lt;path d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;>&lt;/path></code>
-            <code>  &lt;/symbol></code>
-            <code>&lt;/svg></code>
-        </pre>
-    </div></section>
-
-    <section class="slide"><div>
-        <h2>&lt;symbol&gt;</h2>
-        <pre>
-            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
-            <code>  &lt;symbol <mark class="important">id</mark>=&quot;icon_nav_up&quot; <mark class="important">viewBox</mark>=&quot;0 0 20 20&quot;></code>
-            <code>    &lt;path d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;>&lt;/path></code>
-            <code>  &lt;/symbol></code>
-            <code>&lt;/svg></code>
-        </pre>
-    </div></section>
-
-    <section class="slide"><div>
-        <h2>&lt;use&gt;</h2>
-        <pre>
-            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
             <code>  &lt;use xlink:href=&quot;#icon_nav_up&quot;>&lt;/use></code>
             <code>&lt;/svg></code>
         </pre>
     </div></section>
 
     <section class="slide"><div>
-        <h2>&lt;use&gt;</h2>
+        <h2>&lt;symbol&gt;</h2>
         <pre>
             <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
-            <code>  &lt;use xlink:href=&quot;<mark class="important">#icon_nav_up</mark>&quot;>&lt;/use></code>
+            <code>  &lt;symbol <mark class="important">id</mark>=&quot;icon_nav_up&quot; viewBox=&quot;0 0 20 20&quot;></code>
+            <code>    &lt;path d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;>&lt;/path></code>
+            <code>  &lt;/symbol></code>
             <code>&lt;/svg></code>
         </pre>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>&lt;symbol&gt;</h2>
+        <pre>
+            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
+            <code>  &lt;symbol id=&quot;icon_nav_up&quot; <mark class="important">viewBox</mark>=&quot;0 0 20 20&quot;></code>
+            <code>    &lt;path d=&quot;M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z&quot;>&lt;/path></code>
+            <code>  &lt;/symbol></code>
+            <code>&lt;/svg></code>
+        </pre>
+    </div></section>
+
+    <section class="slide shout"><div>
+        <h2 style="text-indent: -0.45em;">&laquo;Библиотека&raquo; контуров</h2>
     </div></section>
 
     <section class="slide shout"><div>
