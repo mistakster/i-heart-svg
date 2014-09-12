@@ -345,6 +345,29 @@
         </pre>
     </div></section>
 
+    <section class="slide demo-scale-use"><div>
+        <span class="next demo-scale-use__trigger"></span>
+        <span class="next demo-scale-use__reset"></span>
+        <span class="next demo-scale-use__trigger extra"></span>
+        <span class="next demo-scale-use__reset extra"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="demo-scale-use__target demo-heart">
+            <use xlink:href="#icon_heart" class="demo-heart__shape"></use>
+        </svg>
+        <pre>
+            <code>.icon > use {</code>
+            <code>  transition: transform 0.5s;</code>
+            <code>}</code>
+            <code>.icon:hover > use {</code>
+            <code>  transform: scale(1.75);</code>
+            <code>}</code>
+        </pre>
+        <pre>
+            <code>&lt;svg class=&quot;icon&quot;></code>
+            <code>  &lt;use xlink:href="#icon_heart">&lt;/use></code>
+            <code>&lt;/svg></code>
+        </pre>
+    </div></section>
+
     <section class="slide demo-scale-origin"><div>
         <span class="next demo-scale-origin__trigger"></span>
         <span class="next demo-scale-origin__reset"></span>

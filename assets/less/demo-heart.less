@@ -36,6 +36,20 @@
   }
 }
 
+.demo-scale-use {
+  &__target > use {
+    transition: transform 0.5s;
+  }
+  &__trigger.active ~ &__target > use,
+  &__trigger.extra.active ~ &__target > use {
+    transform: scale(1.75);
+  }
+  &__reset.active ~ &__target > use,
+  &__reset.extra.active ~ &__target > use {
+    transform: scale(1);
+  }
+}
+
 .demo-scale-origin {
   &__target {
     transition: transform 0.5s;
