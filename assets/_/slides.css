@@ -205,12 +205,28 @@
           transition: fill 0.5s;
 }
 .demo-color__trigger.active ~ .demo-color__target,
-.demo-color__trigger.extra-trigger.active ~ .demo-color__target {
+.demo-color__trigger.extra.active ~ .demo-color__target {
   fill: blue;
 }
 .demo-color__reset.active ~ .demo-color__target,
-.demo-color__reset.extra-reset.active ~ .demo-color__target {
+.demo-color__reset.extra.active ~ .demo-color__target {
   fill: red;
+}
+.demo-scale__target {
+  -webkit-transition: -webkit-transform 0.5s;
+          transition: transform 0.5s;
+}
+.demo-scale__trigger.active ~ .demo-scale__target,
+.demo-scale__trigger.extra.active ~ .demo-scale__target {
+  -webkit-transform: scale(1.75);
+      -ms-transform: scale(1.75);
+          transform: scale(1.75);
+}
+.demo-scale__reset.active ~ .demo-scale__target,
+.demo-scale__reset.extra.active ~ .demo-scale__target {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 .demo-scale-origin__target {
   -webkit-transition: -webkit-transform 0.5s;
@@ -220,13 +236,13 @@
           transform-origin: 100% 0;
 }
 .demo-scale-origin__trigger.active ~ .demo-scale-origin__target,
-.demo-scale-origin__trigger.extra-trigger.active ~ .demo-scale-origin__target {
+.demo-scale-origin__trigger.extra.active ~ .demo-scale-origin__target {
   -webkit-transform: scale(1.75);
       -ms-transform: scale(1.75);
           transform: scale(1.75);
 }
 .demo-scale-origin__reset.active ~ .demo-scale-origin__target,
-.demo-scale-origin__reset.extra-reset.active ~ .demo-scale-origin__target {
+.demo-scale-origin__reset.extra.active ~ .demo-scale-origin__target {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
@@ -239,28 +255,28 @@
   transition-origin: 100% 50%;
 }
 .demo-parts__trigger.active ~ .demo-parts__target .demo-parts__piece_left,
-.demo-parts__trigger.extra-trigger.active ~ .demo-parts__target .demo-parts__piece_left {
+.demo-parts__trigger.extra.active ~ .demo-parts__target .demo-parts__piece_left {
   -webkit-transform: rotate(5deg);
       -ms-transform: rotate(5deg);
           transform: rotate(5deg);
   opacity: 0.75;
 }
 .demo-parts__trigger.active ~ .demo-parts__target .demo-parts__piece_right,
-.demo-parts__trigger.extra-trigger.active ~ .demo-parts__target .demo-parts__piece_right {
+.demo-parts__trigger.extra.active ~ .demo-parts__target .demo-parts__piece_right {
   -webkit-transform: translate(5px, -3px);
       -ms-transform: translate(5px, -3px);
           transform: translate(5px, -3px);
   opacity: 0.5;
 }
 .demo-parts__reset.active ~ .demo-parts__target .demo-parts__piece_left,
-.demo-parts__reset.extra-reset.active ~ .demo-parts__target .demo-parts__piece_left {
+.demo-parts__reset.extra.active ~ .demo-parts__target .demo-parts__piece_left {
   -webkit-transform: rotate(0);
       -ms-transform: rotate(0);
           transform: rotate(0);
   opacity: 1;
 }
 .demo-parts__reset.active ~ .demo-parts__target .demo-parts__piece_right,
-.demo-parts__reset.extra-reset.active ~ .demo-parts__target .demo-parts__piece_right {
+.demo-parts__reset.extra.active ~ .demo-parts__target .demo-parts__piece_right {
   -webkit-transform: translate(-0.1px, 0);
       -ms-transform: translate(-0.1px, 0);
           transform: translate(-0.1px, 0);
