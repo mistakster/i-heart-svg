@@ -139,6 +139,16 @@
   top: 384px;
   left: 704px;
 }
+.slide-example__container_2,
+.slide-example__container_3 {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+          transition: opacity 0.5s;
+}
+.slide-example__copy-trigger.active ~ .slide-example__container_2,
+.slide-example__copy-trigger.active ~ .slide-example__container_3 {
+  opacity: 1;
+}
 .prohibition-sign.active .prohibition-sign__shape {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;

@@ -95,16 +95,7 @@
 
     <section class="slide"><div>
         <div class="slide-example">
-            <div class="slide-example__container">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path d="M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z"></path>
-                </svg>
-            </div>
-        </div>
-    </div></section>
-
-    <section class="slide"><div>
-        <div class="slide-example">
+            <span class="next slide-example__copy-trigger"></span>
             <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
                 <symbol viewBox="0 0 20 20" id="example-nav-up">
                     <path d="M15 12l-5-5-5 5 1 1 4-4 4 4 1-1z"></path>
@@ -120,10 +111,6 @@
                 <svg xmlns="http://www.w3.org/2000/svg"><use fill="blue" transform="rotate(180 32 32)" xlink:href="#example-nav-up"></use></svg>
             </div>
         </div>
-    </div></section>
-
-    <section class="slide shout"><div>
-        <h2>&lt;use&gt;</h2>
     </div></section>
 
     <section class="slide"><div>
@@ -196,17 +183,14 @@
         <h2 style="text-indent: -0.45em;">&laquo;Библиотека&raquo; контуров</h2>
     </div></section>
 
-    <section class="slide shout"><div>
-        <h2>Почему&nbsp;бы не&nbsp;сослаться на&nbsp;внешний файл?</h2>
-    </div></section>
-
     <section class="slide"><div>
-        <h2>&lt;use&gt;</h2>
+        <h2>Почему&nbsp;бы не&nbsp;сослаться на&nbsp;внешний файл?</h2>
         <pre>
             <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;></code>
             <code>  &lt;use xlink:href=&quot;<mark class="important">external.svg#icon_nav_up</mark>&quot;>&lt;/use></code>
             <code>&lt;/svg></code>
         </pre>
+        <p>По&nbsp;стандарту в&nbsp;ссылке можно использовать любой интернационализированный идентификатор ресурса.</p>
     </div></section>
 
     <section class="slide prohibition-sign"><div>

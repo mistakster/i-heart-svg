@@ -58,4 +58,15 @@
 
   }
 
+  &__container_2,
+  &__container_3 {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  &__copy-trigger.active ~ &__container_2,
+  &__copy-trigger.active ~ &__container_3 {
+    opacity: 1;
+  }
+
 }
