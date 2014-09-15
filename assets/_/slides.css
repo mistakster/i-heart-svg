@@ -328,3 +328,10 @@
   font: 48px/1 'Open Sans Light', sans-serif;
   margin-bottom: 48px;
 }
+.slide.cover.center img {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
