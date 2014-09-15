@@ -277,8 +277,6 @@
         </ol>
     </div></section>
 
-    <!-- Demo -->
-
     <section class="slide shout"><div>
         <h2>Демонстрация</h2>
     </div></section>
@@ -392,7 +390,7 @@
 
     <section class="slide"><div>
         <pre>
-            <code>&lt;svg&gt;</code>
+            <code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;</code>
             <code>  &lt;defs&gt;</code>
             <code>    &lt;symbol id=&quot;icon-1&quot;&gt;</code>
             <code>      &lt;g class=&quot;group-1&quot;&gt;&hellip;&lt;/g&gt;</code>
@@ -404,11 +402,26 @@
         </pre>
     </div></section>
 
+    <section class="slide shout"><div>
+        <h2>SVG SMIL animation</h2>
+    </div></section>
+    
+    <section class="slide"><div>
+        <pre>
+            <code>&lt;pattern id=&quot;animated-spiral-pattern&quot;</code>
+            <code>      x=&quot;0&quot; y=&quot;0&quot; width=&quot;1&quot; height=&quot;1&quot;></code>
+            <code>  &lt;animateTransform attributeName=&quot;patternTransform&quot;</code>
+            <code>        attributeType=&quot;XML&quot; type=&quot;rotate&quot;</code>
+            <code>        from=&quot;360 90 90&quot; to=&quot;0 90 90&quot; dur=&quot;3s&quot;</code>
+            <code>        repeatCount=&quot;indefinite&quot;>&lt;/animateTransform></code>
+            <code>  &lt;g id=&quot;spiral-shape&quot;>&hellip;&lt;/g></code>
+            <code>&lt;/pattern></code>
+        </pre>
+    </div></section>
+
     <section class="slide cover center" style="background: #f1e8d6;"><div>
         <img src="assets/images/can-i-use-svg-smil.png" alt="Can I Use SVG SMIL animation?" width="896" height="504">
     </div></section>
-
-    <!-- /Demo -->
 
     <section class="slide shout"><div>
         <h2>
